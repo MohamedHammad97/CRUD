@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icofont/icofont.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="w-75 mx-auto my-4">
+            <h1 class="text-center mb-3">CRUD SYSTEM MANGMENT</h1>
+            <form id="formProduct">
+                <div class="form-group">
+                    <label for="productName" class="mb-2">Product Name :</label>
+                    <input type="text" id="productName" class="form-control mb-3" placeholder="Enter Product Name">
+                    <p class="text-danger d-none" id="wrongName">invalid Name (suppose start with capital letter and
+                        more than 3
+                        character )</p>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice" class="mb-2">Product Price :</label>
+                    <input type="number" id="productPrice" class="form-control mb-3" placeholder="Enter Product Price">
+                    <p class="text-danger d-none" id="wrongPrice">invalid price (price between 1000 ~ 10000 )</p>
+
+                </div>
+                <div class="form-group">
+                    <label for="productModal" class="mb-2">Product Modal :</label>
+                    <input type="text" id="productModal" class="form-control mb-3" placeholder="Enter Product Modal">
+                    <p class="text-danger d-none" id="wrongModal">invalid Modal (TV || Mobile || Laptop )</p>
+                </div>
+                <div class="form-group">     
+                    <label for="productDescription" class="mb-2">Product Description :</label>
+                    <textarea name="productDescription" class="form-control mb-4" id="productDescription"
+                        placeholder="Write Your Description"></textarea>
+                    <p class="text-danger d-none" id="wrongDesc">Minimum 100 Character</p>
+                </div>
+                <button id="addProduct" class="btn position-relative overflow-hidden form-control fs-4 mb-3 btnAdd">
+                    <span class="position-absolute"></span>
+                    <span class="position-absolute"></span>
+                    <span class="position-absolute"></span>
+                    <span class="position-absolute"></span>
+                    Add Product</button>
+                <button id="updateBtn"
+                    class="btn position-relative overflow-hidden form-control fs-4 mb-3 text-bg-warning d-none">
+                    <span class="position-absolute"></span>
+                    <span class="position-absolute"></span>
+                    <span class="position-absolute"></span>
+                    <span class="position-absolute"></span>
+                    Update Product</button>
+        </div>
+        <div class="form-group w-75 mx-auto">
+            <label for="search" class="mb-2 fs-3">Search</label>
+            <input type="text" id="search" class="form-control mb-5">
+        </div>
+        </form>
+        <table class="table w-75 mx-auto text-center">
+            <thead>
+                <th>index</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Modal</th>
+                <th>Product Description</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tBody">
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
